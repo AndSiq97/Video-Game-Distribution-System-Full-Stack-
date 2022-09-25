@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Register</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Boxicons CSS -->
+    <link
+      href="https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <header>Registration</header>
+      <form action="https://www.codinglabweb.com/">
+        <div class="input-field">
+          <div class="field first_name-field">
+            <label>First Name</label>
+            <input 
+              type="text"
+              placeholder="Enter your first name"
+              class="first_name"
+            />
+          </div> 
+          <span class="error first_name-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Please enter a valid first name
+            </p>
+          </span>
+        </div><br>
+        <div class="input-field">
+          <div class="field last_name-field">
+            <label>Last Name</label>
+            <input 
+              type="text"
+              placeholder="Enter your last name"
+              class="last_name"
+            />
+          </div> 
+          <span class="error last_name-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Please enter a valid last name
+            </p>
+          </span>
+        </div><br>
+        <div class="field username-field">
+          <div class="input-field">
+            <label>Username</label>
+            <input
+              type="text"
+              placeholder="Enter your username"
+              class="username"
+            /> 
+            <span class="error username-error"> 
+              <i class="bx bx-error-circle error-icon"></i> 
+              <p class="error-text">
+                Please enter no more than 15 characters.
+              </p>
+            </span>
+          </div> 
+        </div><br>
+        <div class="field usertype-field">
+          <div class="input-field">
+            <div class="usertype">
+              <p>Select your User Type</p>
+              <select name="format" id="format">
+                <option selected disabled>Choose your User Type</option>
+                <option>Admin</option>
+                <option>Full-Standard</option>
+                <option>Buy-Standard</option>
+                <option>Sell-Standard</option>
+              </select>
+            </div> 
+            <span class="error usertype-error">
+              <i class="bx bx-error-circle error-icon"></i>
+              <p class="error-text">
+                Please enter a valid user type
+              </p>
+            </span>
+          </div>
+        </div><br>
+        <div class="field account_balance-field">
+          <div class="input-field">
+            <label>Initial Account Balance</label>
+            <input
+              type="number"
+              placeholder="Enter your initial account balance"
+              class="account_balance"
+            /> 
+          </div> 
+          <span class="error account_balance-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Please enter a valid account balance
+            </p>
+          </span>
+        </div><br>
+        <div class="field email-field">
+          <div class="input-field">
+            <label>Email</label>
+            <input 
+              type="email"
+              placeholder="Enter your email"
+              class="email"
+            />
+          </div> 
+          <span class="error email-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Please enter a valid email
+            </p>
+          </span>
+        </div><br>
+        <div class="field create-password">
+          <div class="input-field">
+            <label>Password</label>
+            <input
+              type="password"
+              placeholder="Create password"
+              class="password"
+            /> 
+            <i class="bx bx-hide show-hide"></i>
+          </div>
+          <span class="error password-error"> 
+            <i class="bx bx-error-circle error-icon"></i> 
+            <p class="error-text">
+              Please enter at least 8 and no more than 15 characters
+              with number, symbol, small and
+              capital letter.
+            </p>
+          </span> 
+        </div> <br>
+        <div class="field confirm-password">
+          <div class="input-field">
+            <label>Confirm Password</label>
+            <input
+              type="password"
+              placeholder="Confirm password"
+              class="cPassword"
+            /> 
+            <i class="bx bx-hide show-hide"></i>
+          </div> 
+          <span class="error cPassword-error">
+            <i class="bx bx-error-circle error-icon"></i>
+            <p class="error-text">
+              Password don't match
+            </p>
+          </span> 
+        </div><br>
+        <div class="input-field button">
+          <input type="submit" value="Register" />
+        </div> 
+      </form>
+      <p>By clicking the Sign Up button, you agree to our
+        <a href="#">Terms and Condition</a> and <a href="#">Policy</a>
+      </p><br>
+      <p>Already Have an Account?<br><a href="login.html">Login here</a></p>
+    </div>
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+  </body>
+</html>
