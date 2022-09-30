@@ -19,7 +19,7 @@
   <body>
     <div class="container">
       <header>Registration</header>
-      <form action="https://www.codinglabweb.com/">
+      <form action="create.php" method="POST">
         <div class="field first_name-field">
           <div class="input-field">
             <label>First Name</label>
@@ -27,6 +27,7 @@
               type="text"
               placeholder="Enter your first name"
               class="first_name"
+              name="first_name"
             />
           </div> 
           <span class="error first_name-error">
@@ -43,6 +44,7 @@
               type="text"
               placeholder="Enter your last name"
               class="last_name"
+              name="last_name"
             />
           </div> 
           <span class="error last_name-error"> 
@@ -59,6 +61,7 @@
               type="text"
               placeholder="Enter your username"
               class="username"
+              name="username"
             /> 
           </div>
           <span class="error username-error"> 
@@ -72,7 +75,7 @@
           <div class="input-field">
             <div class="usertype">
               <p>Select your User Type</p>
-              <select name="format" id="format">
+              <select name="usertype" id="usertype">
                 <option>Admin</option>
                 <option>Full-Standard</option>
                 <option>Buy-Standard</option>
@@ -88,6 +91,7 @@
               type="number"
               placeholder="Enter your initial account balance"
               class="account_balance"
+              name="account_balance"
             /> 
           </div> 
           <span class="error account_balance-error"> 
@@ -104,6 +108,7 @@
               type="email"
               placeholder="Enter your email"
               class="email"
+              name="email"
             />
           </div> 
           <span class="error email-error">
@@ -120,6 +125,7 @@
               type="password"
               placeholder="Create password"
               class="password"
+              name="password"
             /> 
             <i class="bx bx-hide show-hide"></i>
           </div> 
@@ -137,6 +143,7 @@
               type="password"
               placeholder="Confirm password"
               class="cPassword"
+              name="cPassword"
             /> 
             <i class="bx bx-hide show-hide"></i>
           </div> 
@@ -148,7 +155,7 @@
           </span><br>
         </div>
         <div class="input-field button">
-          <input type="submit" value="Register" />
+          <button type="submit">Register</button>
         </div> 
       </form>
       <p>By clicking the Sign Up button, you agree to our
