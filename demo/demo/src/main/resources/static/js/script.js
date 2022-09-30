@@ -20,7 +20,7 @@ const form = document.querySelector("form"),
 
 // First Name Validation
 function checkFirstName() {
-  const firstnamePattern = /^[a-z]{2,20}$/;
+  const firstnamePattern = /^[A-Za-z]{2,50}$/;
   if (!firstnameInput.value.match(firstnamePattern)) {
     return firstnameField.classList.add("invalid"); //adding invalid class if first name value do not mathced with firstnamePattern
   }
@@ -29,7 +29,7 @@ function checkFirstName() {
 
 // Last Name Validation
 function checkLastName() {
-  const lastnamePattern = /^[a-z]{2,20}$/;
+  const lastnamePattern = /^[A-Za-z]{2,50}$/;
   if (!lastnameInput.value.match(lastnamePattern)) {
     return lastnameField.classList.add("invalid"); //adding invalid class if last name value do not mathced with lastnamePattern
   }
@@ -47,7 +47,7 @@ function checkEmail() {
 
 // Username Validation
 function createUsername() {
-  const usernamePattern = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]{8,15}$/;
+  const usernamePattern = /^[A-Za-z0-9]{2,15}$/;
 
   if (!usernameInput.value.match(usernamePattern)) {
     return usernameField.classList.add("invalid"); //adding invalid class if username input value do not match with usernamePattern
@@ -57,7 +57,7 @@ function createUsername() {
 
 // Usertype Validation
 function checkUserType() { 
-  if (usertypeInput.value === "Choose your User Type") {
+  if (usertypeInput.value56) {
     return usertypeField.classList.add("invalid"); //adding invalid class if usertype input value is not chosen
   }
   usertypeField.classList.remove("invalid"); //removing invalid class if usertype input value is chosen
@@ -65,7 +65,7 @@ function checkUserType() {
 
 // Account Balance Validation
 function checkAccountBalance() { 
-  if (!accountbalanceInput.value >= 0.00) {
+  if (accountbalanceInput.value < 0 || accountbalanceInput.value == "") {
     return accountbalanceField.classList.add("invalid"); //adding invalid class if account balance input value is negative
   }
   accountbalanceField.classList.remove("invalid"); //removing invalid class if account balance input value is positive
@@ -137,7 +137,5 @@ form.addEventListener("submit", (e) => {
     !cPassField.classList.contains("invalid")
   ) {
     location.href = form.getAttribute("action");
-    users_info.push({})
-    console.log(users_info)
   }
 });
